@@ -53,6 +53,15 @@ h1{
     border-radius: 7px;
     padding: 5px;
     box-shadow: 0px 0px 50px -7px rgba(0, 0, 0, 0.35);
+    transform: ;
+}
+
+#img-resize{
+    margin-top: -3px;
+    object-fit:cover;
+    width: 300px;
+    height: 205px;
+    border-radius: 7px;
 }
 .product-list li>img{
     width:100%;
@@ -75,11 +84,17 @@ h1{
     align-items: center;
     /* height:10%; */
 }
-
-#img-resize{
-    margin-top: -3px;
-    object-fit:cover;
-    width: 300px;
-    height: 205px;
-    border-radius: 7px;
+.product-list li div button{
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.product-list li div button:hover{
+    background-color: lightpink;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0px 0px 50px -7px rgba(0, 0, 0, 1);
 }
