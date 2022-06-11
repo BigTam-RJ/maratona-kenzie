@@ -23,8 +23,9 @@ header{
 header img{
     width: 138px;
     height: 34px;
-    left: 116px;
-    top: 19px;
+
+/*     left: 116px;
+    top: 19px; */
 }
 h1{
     height: 33px;
@@ -43,7 +44,6 @@ h1{
 }
 .product-list{
     display: flex; /* utilizado para os elementos ficarem um ao lado do outro */
-    /* flex-direction: column; */
     flex-wrap: wrap;
     max-width: 1200px;
 }
@@ -51,4 +51,19 @@ h1{
     width: 300px;
     max-height: 600px;
     margin: 20px;
+}
+.product-list li h3{
+    color: black;
+    height: 27px;
+    margin: 10px auto;
+}
+.product-list li p{
+    color: #868e96;
+    margin-bottom: 15px;
+}
+.product-list li div{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    /* height:10%; */
 }
