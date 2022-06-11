@@ -2,11 +2,27 @@
 body{
     background-color: #FAFAFA;
     font-family: 'Poppins', sans-serif;
+
 }
 /* HEADER */
 header{
+    height: 72px;
     background-color: #FFFFFF;
+    display: flex; /* utilizado para os elementos ficarem um ao lado do outro */
+    align-items: center; /* alinha verticalmente em relação ao elemento pai
+    justify-content: center; - alinha horizontalmente em relação ao elemento pai
+    justify-content: space-evenly; - alinha com espaços iguais
+    justify-content: space-between; - alinha nos cantos e o espaço fica no centro */
+    box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
 }
+
+header img{
+    width: 138px;
+    height: 34px;
+    left: 116px;
+    top: 19px;
+}
+
 h1{
     height: 33px;
     width: 144px;
@@ -15,5 +31,6 @@ h1{
     line-height: 33px;
     letter-spacing: 0em;
     text-align: left;
+    padding-left: 15px;
 }
 /* MAIN */
