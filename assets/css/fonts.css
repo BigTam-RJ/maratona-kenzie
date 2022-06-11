@@ -1,0 +1,23 @@
+.title-1 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.text-body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.text-caption {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.text-detail {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
