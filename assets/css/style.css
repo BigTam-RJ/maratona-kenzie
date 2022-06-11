@@ -1,8 +1,13 @@
+/* GLOBALS */
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
 /* BODY */
 body{
     background-color: #FAFAFA;
     font-family: 'Poppins', sans-serif;
-
 }
 /* HEADER */
 header{
@@ -30,7 +35,7 @@ h1{
     font-weight: 700;
     line-height: 33px;
     letter-spacing: 0em;
-    text-align: left;
+    /* text-align: left; */
     padding-left: 15px;
 }
 /* MAIN */
