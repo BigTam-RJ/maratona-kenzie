@@ -100,6 +100,8 @@ function removeFromCart(event) {
     /* captura o primeiro elemento "li" a parti do elemento clicado (button) */
     /* console.log(event.target.closest("li")); */
     const productToRemove = event.target.closest("li");
+    /* const arrayToRemove = event.target.parentElement.parentElement;
+    console.log(arrayToRemove); */
     /* aqui devemos remover o produto do arry cart */
 
     /* remove o elemento selecionado */

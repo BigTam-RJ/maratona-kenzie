@@ -269,13 +269,16 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 180px;
-    height: 40px;
+    width: 180px; /* style 1 */
+   /*  width: 295px; */ /* style 2 */
+    height: 40px; /* style 1 */
+    /* height: 35px; */ /* style 2 */
     background-color: #3232df;
     border: 1.5px solid #b3c5be;
     border-radius: 32px;
     color: white;
-    border-radius: 10px 55px 10px 55px;
+    border-radius: 10px 55px 10px 55px; /* style 1 */
+    /* border-radius: 10px 20px 20px 100px; */ /* style 2 */
     font-weight: 600;
     letter-spacing: 1px;
 }
