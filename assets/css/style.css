@@ -102,3 +102,43 @@ h1{
     cursor: pointer;
     box-shadow: 0px 0px 50px -7px rgba(0, 0, 0, 1);
 }
+/* ASIDE */
+.header-carrinho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    width: 320px;
+    margin-top: 40px;
+    background-color: #0000FF;
+    color: white;
+    border-radius: 12px 12px 0 0;
+}
+.products-selected{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    align-items: left;
+    background: #e7f3ff;
+}
+.products-selected img{
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+}
+.products-selected div{
+    display: flex;
+    justify-content: space-between;
+}
+.products-selected h3{
+    font-size: 14px;
+}
+
+.products-selected button img{
+    width: auto;
+    height: 15px;
+    background:none;
+    border: none;
+}
