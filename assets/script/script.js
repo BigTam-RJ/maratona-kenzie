@@ -36,9 +36,8 @@ function addToCart(event) { /* Captura somente o id do elemento clickado */
         for (let i = 0; i < products.length; i++) {
             if (products[i].id === id) {
                 //aqui vamos incrementar o valor total usando o preço do produto adicional
-                total =  total + products[i].price;
+                total =  total + parseFloat(products[i].price);
                 //alterar no DOM o valor do preço e quantidade
-
                 cart.push(products[i]);
             }
         }
@@ -54,11 +53,17 @@ function renderCart() {
 
     /* captura o elemento "valor total" pelo ID */
     const total_cart = document.getElementById("total");
-    console.log(total_cart);
+    /* console.log(total_cart); */
+    let totalString = toNumberString(total);
+    total_cart.innerHTML = `R$${totalString}`;
+    
+    /* captura o elemento "quantidade" pelo ID */
+    const quant_cart = document.getElementById("quant");
+    /* console.log(total_cart); */
+    quantity = cart.length;
+    quant_cart.innerHTML = quantity;
 
-    total_cart.innerHTML = total;
-
-    for (let i = 0; i < cart.length; i++) {
+    for (let i = 0; i < quantity; i++) {
         createProduct(cart[i]);
     }
 }
@@ -99,4 +104,12 @@ function removeFromCart(event) {
 
     /* remove o elemento selecionado */
     productToRemove.remove();
-}   
+} 
+
+function toNumberString(num) { 
+    if (Number.isInteger(num)) { 
+      return num + ".00"
+    } else {
+      return num.toFixed(2); 
+    }
+  }
