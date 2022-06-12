@@ -245,7 +245,7 @@ aside {
     border-top: 2px solid #b4bec9;
 }
 
-#totalizer {
+.totalizer {
     /* background-color: #c7c7fc; */
     background-color: #cdd8e4;
     width: auto;
