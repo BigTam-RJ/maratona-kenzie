@@ -16,7 +16,7 @@ header {
     z-index: 1;
     position: fixed;
     width: 100vw;
-    height: 72px;
+    height: 60px;
     background-color: #FFFFFF;
     display: flex;
     /* utilizado para os elementos ficarem um ao lado do outro */
@@ -256,7 +256,7 @@ aside {
     border-bottom: 3px solid #b4bec9;
 }
 .btn-container{
-    height: 60px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,18 +264,19 @@ aside {
     border-radius: 0 0 10px 70px;
 }
 #btn-checkout {
-    /* box-sizing: border-box; */
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 180px;
     height: 40px;
-    /* background: #E4F7EF; */
     background-color: #3232df;
     border: 1.5px solid #b3c5be;
     border-radius: 32px;
     color: white;
+    border-radius: 10px 55px 10px 55px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 #btn-checkout:hover {
     background-color: rgb(255, 225, 229);
