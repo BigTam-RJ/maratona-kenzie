@@ -38,6 +38,9 @@ function addToCart(event) { /* Captura somente o id do elemento clickado */
 }
 
 function renderCart() {
+    /* captura a ul pela classe */
+    const UL_cart = document.querySelector(".products-selected");
+    UL_cart.innerHTML = "";
     for (let i = 0; i < cart.length; i++) {
         createProduct(cart[i]);
     }
@@ -55,15 +58,15 @@ function createProduct(product) {
 
     /* preenche os elementos na nova li */
     LI_cart.innerHTML = ` 
-    <img src="${product.img}" alt="${product.title}">
+    <img src=${product.img} alt=${product.title}>
     <div>
         <div id="product-description">
-            <h3>"${product.title}"</h3>
+            <h3>${product.title}</h3>
             <button>
                 <img src="./assets/img/trash.png" alt="lixeira">
             </button>
         </div>
-        <span>R$"${product.price}"</span>
+        <span>R$${product.price}</span>
     </div>
     `;
 
