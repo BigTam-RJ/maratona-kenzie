@@ -168,7 +168,7 @@ aside {
     height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 10px;
     align-items: stretch;
     background: #e7edff;
@@ -177,19 +177,13 @@ aside {
 
 .products-selected li {
     display: flex;
+    padding-bottom: 10px;
 }
 
 .products-selected li>img {
     width: 70px;
     height: 70px;
     border-radius: 8px;
-}
-
-#product-description {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0 0 5px;
 }
 
 .products-selected li>div {
@@ -209,7 +203,14 @@ aside {
     font-size: 13px;
 }
 
-#product-description button {
+.product-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 5px;
+}
+
+.product-description button {
     width: 25px;
     height: 25px;
     border: none;
@@ -220,12 +221,12 @@ aside {
     padding-left: -20px;
 }
 
-#product-description button>img {
+.product-description button>img {
     width: 10px;
     height: 12px;
 }
 
-#product-description button:hover {
+.product-description button:hover {
     background-color: rgb(255, 225, 229);
     transition: 0.5s;
     cursor: pointer;
