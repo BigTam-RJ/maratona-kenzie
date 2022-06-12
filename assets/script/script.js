@@ -21,14 +21,24 @@ function captureID(event) { /* Captura somente o id do elemento clickado */
 
 /* ---------- Aqui começa o código --------------  */
 const cart = [];
+let total = 0;
+let quantity = 0;
+
 const listProducts = document.querySelector(".product-list");
 listProducts.addEventListener("click", addToCart);
+
+const removeProducts = document.querySelector(".products-selected");
+removeProducts.addEventListener("click", removeFromCart);
 
 function addToCart(event) { /* Captura somente o id do elemento clickado */
     if (event.target.tagName === "IMG") {
         const id = event.target.id;
         for (let i = 0; i < products.length; i++) {
             if (products[i].id === id) {
+                //aqui vamos incrementar o valor total usando o preço do produto adicional
+                total =  total + products[i].price;
+                //alterar no DOM o valor do preço e quantidade
+
                 cart.push(products[i]);
             }
         }
@@ -41,6 +51,13 @@ function renderCart() {
     /* captura a ul pela classe */
     const UL_cart = document.querySelector(".products-selected");
     UL_cart.innerHTML = "";
+
+    /* captura o elemento "valor total" pelo ID */
+    const total_cart = document.getElementById("total");
+    console.log(total_cart);
+
+    total_cart.innerHTML = total;
+
     for (let i = 0; i < cart.length; i++) {
         createProduct(cart[i]);
     }
@@ -62,7 +79,7 @@ function createProduct(product) {
     <div>
         <div class="product-description">
             <h3>${product.title}</h3>
-            <button>
+            <button class="trash-btn">
                 <img src="./assets/img/trash.png" alt="lixeira">
             </button>
         </div>
@@ -75,12 +92,11 @@ function createProduct(product) {
 }
 
 function removeFromCart(event) {
-    /* captura o botão da lixeira pela classe */
-    /* const UL_cart = document.querySelector(".products-selected"); */
-    console.log(event.target);
-}
+    /* captura o primeiro elemento "li" a parti do elemento clicado (button) */
+    /* console.log(event.target.closest("li")); */
+    const productToRemove = event.target.closest("li");
+    /* aqui devemos remover o produto do arry cart */
 
-const cartProducts = document.querySelector(".product-description");
-/* const cartProducts = document.getElementsByClassName("product-description"); */
-/* console.log(cartProducts); */
-cartProducts.addEventListener("click",captureTag2);
+    /* remove o elemento selecionado */
+    productToRemove.remove();
+}   
