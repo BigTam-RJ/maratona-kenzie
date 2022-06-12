@@ -60,7 +60,7 @@ function createProduct(product) {
     LI_cart.innerHTML = ` 
     <img src=${product.img} alt=${product.title}>
     <div>
-        <div id="product-description">
+        <div class="product-description">
             <h3>${product.title}</h3>
             <button>
                 <img src="./assets/img/trash.png" alt="lixeira">
@@ -73,3 +73,14 @@ function createProduct(product) {
     /* pega a li preenchida e renderiza novamente na ul capturada*/
     UL_cart.appendChild(LI_cart);
 }
+
+function removeFromCart(event) {
+    /* captura o botão da lixeira pela classe */
+    /* const UL_cart = document.querySelector(".products-selected"); */
+    console.log(event.target);
+}
+
+const cartProducts = document.querySelector(".product-description");
+/* const cartProducts = document.getElementsByClassName("product-description"); */
+/* console.log(cartProducts); */
+cartProducts.addEventListener("click",captureTag2);
